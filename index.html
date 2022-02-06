@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Money Management</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!-- transaction area starts from here -->
+        <div class="container" id="transaction-area">
+            <h1 class="text-center">Money Manager</h1>
+            <br />
+            <h3 class="text-center">Transaction Area</h3>
+            <div class="row live-box">
+                <div class="col-md-4">
+                    <div class="styled-box deposit">
+                        <h3>Deposit</h3>
+                        <p>$ <span id="curr-deposit">100</span></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="styled-box withdraw">
+                        <h3>Withdraw</h3>
+                        <p>$ <span id="curr-withdraw">00</span></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="styled-box balance">
+                        <h3>Balance</h3>
+                        <p>$ <span id="total-balance">1240</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="submit-area" id="deposit-area">
+                        <h3>Deposit</h3>
+                        <input
+                            type="text"
+                            placeholder="$ amount you want to deposit"
+                            class="form-control"
+                            id="deposit-amt"
+                        />
+                        <button class="btn btn-success" id="deposit-btn">
+                            Deposit
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="submit-area" id="withdraw-area">
+                        <h3>Withdraw</h3>
+                        <input
+                            type="text"
+                            placeholder="$ amount you want to withdraw"
+                            class="form-control"
+                            id="withdraw-amt"
+                        />
+                        <button class="btn btn-danger" id="withdraw-btn">
+                            Withdraw
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- transaction area ends here -->
+    <script src="js/transaction.js"></script>
+    </body>
+</html>
