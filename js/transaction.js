@@ -15,7 +15,7 @@ depositBtn.addEventListener('click', function(e){
     }
     else{
         let totalDepo = parseInt(depoNewAmount) + parseInt(depoPreAmount);
-        depositCount.innerHTML = totalDepo;
+        depositCount.innerText = totalDepo;
         inputDeposite.value = '';
         let totalBalance = parseInt(balanceCount) + parseInt(depoNewAmount);
         
