@@ -15,10 +15,9 @@ depositBtn.addEventListener('click', function(e){
     }
     else{
         let totalDepo = parseInt(depoNewAmount) + parseInt(depoPreAmount);
+        let totalBalance = parseInt(balanceCount) + parseInt(depoNewAmount);
         depositCount.innerText = totalDepo;
         inputDeposite.value = '';
-        let totalBalance = parseInt(balanceCount) + parseInt(depoNewAmount);
-        
         document.getElementById('total-balance').innerText = totalBalance;
     }
     
@@ -40,6 +39,9 @@ withdrawBtn.addEventListener('click',function(e){
         document.getElementById('total-balance').innerText = balaceDeduct;
         let addWithdraw = parseInt(withdrawCount) + parseInt(withdrawAmount);
         document.getElementById('curr-withdraw').innerText = addWithdraw;
+    }
+    else if(withdrawAmount ==''){
+        alert("Please put some value first");
     }
     else{
         alert("Insufficient Balance!!!!");
